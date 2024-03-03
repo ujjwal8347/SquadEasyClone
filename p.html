@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      .effect-target {
+        opacity: 1;
+        transition: transform 0.4s ease, opacity 0.7s ease;
+      }
+      .center-and-fade {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="h">
+      <div class="fixed-container">
+        <div class="relative-container">
+          <div class="img-1 absolute-container effect-target" data-translate-x="50vw" data-translate-y="50vh">
+            <img
+              src="https://www.squadeasy.com/hs-fs/hubfs/shape=shape7-compressed.webp?width=392&height=530&name=shape=shape7-compressed.webp"
+              alt=""
+            />
+          </div>
+          <div class="img-2 absolute-container effect-target">
+            <img
+              src="https://www.squadeasy.com/hs-fs/hubfs/vector-3%201-compressed.webp?width=244&height=498&name=vector-3%201-compressed.webp"
+              alt=""
+            />
+          </div>
+          <div class="img-3 absolute-container effect-target">
+            <img
+              src="https://www.squadeasy.com/hs-fs/hubfs/Mask-group%20(2)-1-compressed.webp?width=588&height=720&name=Mask-group%20(2)-1-compressed.webp"
+              alt=""
+            />
+          </div>
+          <div class="img-4 absolute-container effect-target">
+            <img
+              src="https://www.squadeasy.com/hs-fs/hubfs/Vector%20570%20(1)-compressed.webp?width=522&height=652&name=Vector%20570%20(1)-compressed.webp"
+              alt=""
+            />
+          </div>
+          <div class="img-5 absolute-container effect-target">
+            <img
+              src="https://www.squadeasy.com/hs-fs/hubfs/vector-4%2010-compressed.webp?width=198&height=462&name=vector-4%2010-compressed.webp"
+              alt=""
+            />
+          </div>
+          <div class="img-6 absolute-container effect-target">
+            <img
+              src="https://www.squadeasy.com/hs-fs/hubfs/image%202-compressed.webp?width=394&height=532&name=image%202-compressed.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="placeholder" style="height: 100vh"></div>
+    <div class="box-header" id="triggerDiv">
+      <div class="box"></div>
+    </div>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const triggerDiv = document.getElementById('triggerDiv');
+            const effectTarget = document.querySelector('.effect-target');
+            let lastPosition = window.scrollY;
+        
+            window.addEventListener('scroll', function() {
+                let currentPosition = window.scrollY;
+                let directionDown = currentPosition > lastPosition;
+                let triggerTopInView = triggerDiv.getBoundingClientRect().top <= window.innerHeight;
+                let triggerFullyInView = triggerDiv.getBoundingClientRect().bottom <= window.innerHeight;
+        
+                if (directionDown && triggerTopInView && !triggerFullyInView) {
+                    effectTarget.classList.add('hidden');
+                } else if (!directionDown && triggerTopInView) {
+                    effectTarget.classList.remove('hidden');
+                    effectTarget.style.opacity = 1; 
+                }
+        
+                lastPosition = currentPosition;
+            });
+        });
+        </script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const effectTargets = document.querySelectorAll(".effect-target");
+        const triggerDiv = document.getElementById("triggerDiv");
+        const container = document.querySelector(".relative-container");
+        function isInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+              (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        window.addEventListener("scroll", function () {
+          const rect = triggerDiv.getBoundingClientRect();
+          const partiallyInView =
+            rect.top < window.innerHeight && rect.bottom >= 0;
+          if (partiallyInView && !isInViewport(triggerDiv)) {
+           
+            effectTargets.forEach((effectTarget)=>{
+                const cx = (container.offsetWidth - effectTarget.offsetWidth) / 2 - effectTarget.offsetLeft;
+                const cy = (container.offsetHeight - effectTarget.offsetHeight) / 2 - effectTarget.offsetTop;
+                effectTarget.style.opacity = '0'; 
+                effectTarget.style.transform = `translate(${cx}px, ${cy}px)`; 
+            })
+          } else if (!partiallyInView) {
+           
+            effectTargets.forEach((effectTarget)=>{
+                const cx = (container.offsetWidth - effectTarget.offsetWidth) / 2 - effectTarget.offsetLeft;
+                const cy = (container.offsetHeight - effectTarget.offsetHeight) / 2 - effectTarget.offsetTop;
+                effectTarget.style.opacity = '1'; 
+                effectTarget.style.transform = `translate(0 , 0)`; 
+            })
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

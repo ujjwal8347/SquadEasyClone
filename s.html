@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Triggered Animation</title>
+    <style>
+        .content-before {
+            height: 100vh; /* Enough content to start with a scroll */
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #triggerDiv {
+            height: 50px; /* Height for the trigger div */
+            background-color: #3498db;
+            margin: 0 auto; /* Ensures it's visible when it hits the bottom of the viewport */
+        }
+        .content-after {
+            height: 200vh; /* Lots of content after the div */
+            background-color: #e0e0e0;
+        }
+        .effect-target {
+            opacity: 1;
+            transition: opacity s ease; /* Transition effect for the target element */
+        }
+        .hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content-before">
+    <div class="effect-target">Effect Target Element</div>
+</div>
+<div id="triggerDiv"></div>
+<div class="content-after">Scroll back up after this div becomes invisible.</div>
+
+
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const triggerDiv = document.getElementById('triggerDiv');
+    const effectTarget = document.querySelector('.effect-target');
+    let lastPosition = window.scrollY;
+
+    window.addEventListener('scroll', function() {
+        let currentPosition = window.scrollY;
+        let directionDown = currentPosition > lastPosition;
+        let triggerTopInView = triggerDiv.getBoundingClientRect().top <= window.innerHeight;
+        let triggerFullyInView = triggerDiv.getBoundingClientRect().bottom <= window.innerHeight;
+
+        if (directionDown && triggerTopInView && !triggerFullyInView) {
+            // Scrolling down, and the top of the triggerDiv hits the bottom of the viewport
+            effectTarget.classList.add('hidden');
+        } else if (!directionDown && triggerTopInView) {
+            // Scrolling up, and the top of the triggerDiv has exited the viewport
+            effectTarget.classList.remove('hidden');
+        }
+
+        lastPosition = currentPosition;
+    });
+});
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+       @keyframes fadeMoveToCenter {
+  from {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    /* Move to the center of the viewport */
+    transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+  }
+}
+
+.img-1.animate {
+  animation: fadeMoveToCenter 2s forwards;
+}
+
+
+
+
+
+      </style>
+  </head>
+  <body>
+    <div>
+      <div class="img-header">
+        <span
+          class="img-1"
+          ><img
+            src="https://www.squadeasy.com/hs-fs/hubfs/shape=shape7-compressed.webp?width=392&height=530&name=shape=shape7-compressed.webp"
+            alt=""
+        /></span>
+        <span class="img-2"
+          ><img
+            src="https://www.squadeasy.com/hs-fs/hubfs/vector-3%201-compressed.webp?width=244&height=498&name=vector-3%201-compressed.webp"
+            alt=""
+        /></span>
+        <span class="img-3"
+          ><img
+            src="https://www.squadeasy.com/hs-fs/hubfs/Mask-group%20(2)-1-compressed.webp?width=588&height=720&name=Mask-group%20(2)-1-compressed.webp"
+            alt=""
+        /></span>
+        <span class="img-4"
+          ><img
+            src="https://www.squadeasy.com/hs-fs/hubfs/Vector%20570%20(1)-compressed.webp?width=522&height=652&name=Vector%20570%20(1)-compressed.webp"
+            alt=""
+        /></span>
+        <span class="img-5"
+          ><img
+            src="https://www.squadeasy.com/hs-fs/hubfs/vector-4%2010-compressed.webp?width=198&height=462&name=vector-4%2010-compressed.webp"
+            alt=""
+        /></span>
+        <span class="img-6"
+          ><img
+            src="https://www.squadeasy.com/hs-fs/hubfs/image%202-compressed.webp?width=394&height=532&name=image%202-compressed.webp"
+            alt=""
+            data-aos="fade-up-left"
+        /></span>
+      </div>
+    </div>
+    <h1>hwlele 1</h1>
+    <h1>hwlele 2</h1>
+    <h1>hwlele 3</h1>
+    <h1>hwlele 4</h1>
+    <h1>hwlele 5</h1>
+    <h1>hwlele 6</h1>
+    <h1>hwlele 7</h1>
+    <h1>hwlele 8</h1>
+    <h1>hwlele 9</h1>
+    <h1>hwlele 10</h1>
+    <h1>hwlele 11</h1>
+    <h1>hwlele 12</h1>
+    <h1>hwlele 13</h1>
+    <h1>hwlele 14</h1>
+    ok
+    <h1 id="trigger">hwlele 15</h1>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        easing: "ease-in-out-back",
+      });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const triggerPoint = document.getElementById('trigger');
+          const img1 = document.querySelector('.img-1');
+        
+          function handleScroll() {
+            const triggerRect = triggerPoint.getBoundingClientRect();
+            // Check if the top of "hwlele 15" is at or above the bottom of the viewport
+            if (triggerRect.top <= window.innerHeight) {
+              img1.classList.add('animate');
+            } else {
+              // Optionally, remove the animation class if scrolled back up past the trigger
+              img1.classList.remove('animate');
+              // Reset the animation to allow it to be re-triggered
+              img1.style.animation = 'none';
+              setTimeout(() => {
+                img1.style.animation = '';
+              }, 10);
+            }
+          }
+        
+          window.addEventListener('scroll', handleScroll);
+        });
+        </script>
+        
+      
+      
+  </body>
+</html>
