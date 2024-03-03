@@ -9,7 +9,7 @@
     <style>
       .effect-target {
         opacity: 1;
-        transition: transform 0.4s ease, opacity 0.7s ease;
+        transition: transform 0.3s ease, opacity 0.5s ease;
       }
       .center-and-fade {
         opacity: 0;
@@ -17,10 +17,33 @@
     </style>
   </head>
   <body>
+    <div class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="81" height="30" viewBox="0 0 81 30" fill="none">
+                    <path d="M2.57983 9.301C2.57983 10.2761 3.5637 10.6447 6.44395 10.6447C9.23783 10.6447 9.68846 10.4604 9.68846 9.75018C9.68846 9.03994 9.26787 9.00923 6.14353 8.80959C2.25313 8.5754 0.315438 8.26827 0.315438 6.07613C0.315438 3.6997 3.03421 3.25436 6.20362 3.25436C9.55327 3.25436 11.9829 3.6997 11.9829 6.19898H9.38804C9.38804 5.43115 8.45299 5.25839 6.05341 5.25839C3.65383 5.25839 2.91405 5.44651 2.91405 5.96863C2.91405 6.49075 3.37969 6.6328 6.44395 6.86315C9.91752 7.12805 12.2871 7.22019 12.2871 9.64268C12.2871 12.2034 10.0339 12.6526 6.59416 12.6526C3.15438 12.6526 0 12.2034 0 9.301H2.57983ZM26.0987 3.40793V16.3535H23.5001V11.0939C22.535 12.1266 20.9954 12.6526 19.0803 12.6526C16.2113 12.6526 13.7816 11.4317 13.7816 7.96114C13.7816 4.49057 16.2113 3.25436 19.0803 3.25436C20.9954 3.25436 22.535 3.79568 23.5001 4.81305V3.40793H26.0987ZM23.5001 7.96114C23.5001 6.15291 22.2497 5.46187 19.9402 5.46187C17.6307 5.46187 16.3615 6.15291 16.3615 7.96114C16.3615 9.76937 17.6495 10.4451 19.9402 10.4451C22.2309 10.4451 23.5001 9.75018 23.5001 7.96114ZM53.7897 7.91507V12.4952H51.1911V11.3703C49.5146 12.2253 47.6646 12.6646 45.7911 12.6526C43.2976 12.6526 41.743 11.831 41.743 9.78089C41.743 7.41983 44.2815 6.67887 47.1017 6.67887C48.4901 6.66805 49.8712 6.88716 51.1911 7.32769C51.1911 5.53865 49.0168 5.27759 47.8114 5.18929C46.2708 5.04961 44.7185 5.23784 43.2526 5.74212L42.464 4.09897C44.2351 3.52303 46.0844 3.23795 47.9428 3.25436C51.6455 3.25436 53.7597 4.47137 53.7897 7.91507ZM51.1911 8.98235C49.975 8.59943 48.7082 8.41164 47.4359 8.42568C45.5019 8.42568 44.3416 8.76736 44.3416 9.69259C44.3416 10.6178 45.2015 10.7253 46.5421 10.7253C48.1452 10.6728 49.7255 10.3229 51.2061 9.69259L51.1911 8.98235ZM53.7822 21.4096V25.9897H51.1873V24.8649C49.5096 25.7203 47.6584 26.1596 45.7836 26.1471C43.2939 26.1471 41.7392 25.3294 41.7392 23.2754C41.7392 20.9144 44.274 20.1734 47.0979 20.1734C48.4863 20.1632 49.8673 20.3823 51.1873 20.8222C51.1873 19.0332 49.0131 18.7721 47.8077 18.6838C46.267 18.5444 44.7148 18.7326 43.2488 19.2367L42.4339 17.5935C44.205 17.0173 46.0543 16.7322 47.9128 16.7489C51.638 16.7489 53.7522 17.9659 53.7822 21.4096ZM51.1873 22.4577C49.9712 22.0752 48.7045 21.8874 47.4321 21.901C45.5019 21.901 44.3378 22.2427 44.3378 23.168C44.3378 24.0932 45.1978 24.2007 46.5421 24.2007C48.1376 24.1516 49.7113 23.8082 51.1873 23.1871V22.4577ZM57.8604 22.8032C57.8604 23.7784 58.8405 24.1469 61.7245 24.1469C64.5146 24.1469 64.969 23.9627 64.969 23.2524C64.969 22.5422 64.5446 22.5115 61.4203 22.3118C57.5111 22.0776 55.596 21.7705 55.596 19.5784C55.596 17.2019 58.311 16.7566 61.4804 16.7566C64.8338 16.7566 67.2634 17.2019 67.2634 19.7051H64.6648C64.6648 18.9372 63.7298 18.7606 61.3302 18.7606C58.9306 18.7606 58.2058 18.9411 58.2058 19.4632C58.2058 19.9853 58.6752 20.1274 61.7395 20.3577C65.2093 20.6226 67.5789 20.7147 67.5789 23.1372C67.5789 25.6979 65.3257 26.1471 61.8897 26.1471C58.4537 26.1471 55.2805 25.6979 55.2805 22.8032H57.8604ZM81 16.9025L74.9917 29.848H72.1377L73.9364 26.0089H72.6071L68.0032 16.9025H70.8722L74.6762 24.4003L78.146 16.9025H81ZM34.1424 24.001C32.4225 24.001 31.0669 23.5212 30.7627 22.0815H40.3611C40.3611 17.9467 37.6611 16.7604 34.2814 16.7604C30.6726 16.7604 28.1228 18.1195 28.1228 21.4672C28.1228 24.8149 30.7515 26.1586 34.1312 26.1586C37.2405 26.1586 39.3885 25.172 40.0944 23.1142H37.3268C36.6584 23.7438 35.6745 24.001 34.1424 24.001ZM34.2814 18.7529C35.9111 18.7529 37.1766 19.11 37.616 20.3884H30.8566C31.2772 19.11 32.5127 18.7529 34.2814 18.7529ZM37.9277 3.40793H37.4958V8.74433C36.5645 9.51215 34.9986 10.3683 33.5266 10.3683C31.3974 10.3683 30.7627 9.36243 30.7627 7.43518V3.40793H28.1641L28.1341 8.4372C28.1641 11.7849 30.3872 12.6602 32.753 12.6602C34.4552 12.6247 36.1071 12.0639 37.4921 11.0516V12.5028H40.0719V3.40793H37.9277ZM65.1868 0.152344H64.984V4.63645C64.0077 3.73042 62.5394 3.25436 60.7481 3.25436C57.8942 3.25436 55.4495 4.48673 55.4495 7.96114C55.4495 11.4356 57.8942 12.6526 60.7481 12.6526C62.5394 12.6526 64.0077 12.1727 64.984 11.2666V12.4952H67.5638V0.152344H65.1868ZM64.984 9.02458C64.5446 10.0304 63.3843 10.4451 61.6043 10.4451C59.2949 10.4451 58.0444 9.75018 58.0444 7.96114C58.0444 6.17211 59.2949 5.46187 61.6043 5.46187C63.3805 5.46187 64.5409 5.87265 64.984 6.88619C65.1249 7.22589 65.194 7.59222 65.1868 7.96114C65.1937 8.32631 65.1246 8.68881 64.984 9.02458Z" fill="black"></path>
+                  </svg>
+            </div>
+            <div class="header-right">
+                <div>Solution</div>
+                <div>Application</div>
+                <div>Challenges</div>
+                <div>Resources</div>
+                <div>FR</div>
+                <div>
+                    <button>Demander une démo</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="h">
       <div class="fixed-container">
         <div class="relative-container">
-          <div class="img-1 absolute-container effect-target" data-translate-x="50vw" data-translate-y="50vh">
+          <div
+            class="img-1 absolute-container effect-target"
+            data-translate-x="50vw"
+            data-translate-y="50vh"
+          >
             <img
               src="https://www.squadeasy.com/hs-fs/hubfs/shape=shape7-compressed.webp?width=392&height=530&name=shape=shape7-compressed.webp"
               alt=""
@@ -56,13 +79,43 @@
               alt=""
             />
           </div>
+          <div class="content">
+            <div class="blur-target">
+              <h1>
+                <span>VOUS N'AVEZ </span>
+                <span>JAMAIS ÉTÉ AUSSI</span>
+                <span>PROCHE DE</span>
+                <span>RAPPROCHER </span>
+                <span>VOS SALARIÉS</span>
+              </h1>
+              <p>L'app de cohésion préférée des salariés.</p>
+              <div class="button-container">
+                <button>
+                    <div>Demander une démo</div>
+                    <div>Demander une démo</div>
+                  </button>
+              </div>
+              <div class="svg-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 16 24" fill="none">
+                    <path d="M9.7788 23.5663L5.76281 23.0602L1.66869 18.0241L3.75091 17.6291L7.39186 22.1633L7.39186 -3.47161e-07L9.84521 0.349731L9.84521 21.4391L13.2713 18.5055L15.334 18.9704L9.7788 23.5663Z" fill="#EA5DA3"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="placeholder" style="height: 100vh"></div>
     <div class="box-header" id="triggerDiv">
-      <div class="box"></div>
+      <div>
+        <img src="https://2832477.fs1.hubspotusercontent-na1.net/hubfs/2832477/THEME_SQUADEASY/mockup-1-1.webp" alt="">
+      </div>
     </div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
 
     <!-- <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -92,39 +145,71 @@
         const effectTargets = document.querySelectorAll(".effect-target");
         const triggerDiv = document.getElementById("triggerDiv");
         const container = document.querySelector(".relative-container");
-        function isInViewport(element) {
-          const rect = element.getBoundingClientRect();
-          return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <=
-              (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <=
-              (window.innerWidth || document.documentElement.clientWidth)
-          );
-        }
+        // function isInViewport(element) {
+        //   const rect = element.getBoundingClientRect();
+        //   return (
+        //     rect.top >= 0 &&
+        //     rect.left >= 0 &&
+        //     rect.bottom <=
+        //       (window.innerHeight || document.documentElement.clientHeight) &&
+        //     rect.right <=
+        //       (window.innerWidth || document.documentElement.clientWidth)
+        //   );
+        // }
+
+        let flag = true;
 
         window.addEventListener("scroll", function () {
-          const rect = triggerDiv.getBoundingClientRect();
-          const partiallyInView =
-            rect.top < window.innerHeight && rect.bottom >= 0;
-          if (partiallyInView && !isInViewport(triggerDiv)) {
-           
-            effectTargets.forEach((effectTarget)=>{
-                const cx = (container.offsetWidth - effectTarget.offsetWidth) / 2 - effectTarget.offsetLeft;
-                const cy = (container.offsetHeight - effectTarget.offsetHeight) / 2 - effectTarget.offsetTop;
-                effectTarget.style.opacity = '0'; 
-                effectTarget.style.transform = `translate(${cx}px, ${cy}px)`; 
-            })
-          } else if (!partiallyInView) {
-           
-            effectTargets.forEach((effectTarget)=>{
-                const cx = (container.offsetWidth - effectTarget.offsetWidth) / 2 - effectTarget.offsetLeft;
-                const cy = (container.offsetHeight - effectTarget.offsetHeight) / 2 - effectTarget.offsetTop;
-                effectTarget.style.opacity = '1'; 
-                effectTarget.style.transform = `translate(0 , 0)`; 
-            })
+    //         const triggerRect = triggerDiv.getBoundingClientRect();
+    //   const triggerEnteringOrLeavingViewport = triggerRect.bottom > 0 && triggerRect.top < window.innerHeight;
+
+        //   const rect = triggerDiv.getBoundingClientRect();
+        //   const partiallyInView =
+        //     rect.top < window.innerHeight && rect.bottom >= 0;
+        // console.log(window.pageYOffset)
+        // console.log(triggerRect.top , triggerRect.bottom , triggerRect.left , triggerRect.right);
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+          if (currentScrollPosition > 0 && flag) {
+            flag = false;
+            effectTargets.forEach((effectTarget) => {
+              const cx =
+                (container.offsetWidth - effectTarget.offsetWidth) / 2 -
+                effectTarget.offsetLeft;
+              const cy =
+                (container.offsetHeight - effectTarget.offsetHeight) / 2 -
+                effectTarget.offsetTop;
+              effectTarget.style.opacity = "0";
+              effectTarget.style.transform = `translate(${cx}px, ${cy}px)`;
+            });
+          } else if (currentScrollPosition === 0) {
+            flag = true;
+            effectTargets.forEach((effectTarget) => {
+              const cx =
+                (container.offsetWidth - effectTarget.offsetWidth) / 2 -
+                effectTarget.offsetLeft;
+              const cy =
+                (container.offsetHeight - effectTarget.offsetHeight) / 2 -
+                effectTarget.offsetTop;
+              effectTarget.style.opacity = "1";
+              effectTarget.style.transform = `translate(0 , 0)`;
+            });
           }
+          const target = document.querySelector(".blur-target");
+          const scrollAmount =
+            window.pageYOffset || document.documentElement.scrollTop;
+          const maxScroll =
+            document.documentElement.scrollHeight - window.innerHeight;
+        //   const blurAmount = Math.min(20 * (scrollAmount / maxScroll), 20);
+        //   const scaleAmount =
+        //     1 + Math.min(0.5 * (scrollAmount / maxScroll), 0.5);
+        //   const opacityAmount =
+        //     1 - Math.min(0.5 * (scrollAmount / maxScroll), 0.5);
+            const blurAmount = Math.min(8 * (scrollAmount / maxScroll), 5); 
+        const scaleAmount = Math.max(1 - (0.8 * (scrollAmount / maxScroll)), 0.5); 
+        const opacityAmount = Math.max(1 - (0.8 * (scrollAmount / maxScroll)), 0.5); 
+          target.style.filter = `blur(${blurAmount}px)`;
+          target.style.transform = `scale(${scaleAmount})`;
+          target.style.opacity = `${opacityAmount}`;
         });
       });
     </script>
