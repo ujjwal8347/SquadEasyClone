@@ -325,22 +325,15 @@
    <div></div>
    <div></div>
    <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-   <div></div>
-  <h1>okkkkkk</h1>
+   </div>
+   <div style="height:100vh;"></div>
+   <div style="border: 5px solid white"></div>
+   <div style="height:100vh"></div>
   <script>
       const arr = ["move1" , "move2" , "move3" , "move4" , "moveLTR12" , "moveLTR11","moveLTR10" , "moveLTR9" , "moveLTR8" , "moveLTR7",
   "moveLTR6","moveLTR5","moveLTR4","moveLTR3","moveLTR2","moveLTR1","moveR1","moveR2","moveR3","moveR4"];
+
+  const arr2 = ["linear" , "ease" , "ease-in" , "ease-out"];
       const snowContainer = document.querySelectorAll(".out-vp div");
       snowContainer.forEach((snow)=>{
         const size = Math.max(Math.floor(Math.random() * 9) , 1);
@@ -349,8 +342,8 @@
         const delay = Math.max(Math.floor(Math.random() * 30) , 1);
         const anim = Math.max(Math.floor(Math.random() * arr.length) , 0);
         snow.style.animationName =  `${arr[anim]}`;
-        snow.style.animationDuration = '15s';
-        snow.style.animationTimingFunction = 'linear';
+        snow.style.animationDuration = `${Math.max(Math.floor(Math.random() * 20) , 12)}s`;
+        snow.style.animationTimingFunction = `${arr2[Math.max(Math.floor(Math.random() * arr2.length) , 0)]}`;
         snow.style.animationIterationCount = "infinite";
         console.log(delay)
         snow.style.animationDelay = `${delay}s`;
